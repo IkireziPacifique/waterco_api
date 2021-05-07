@@ -9,14 +9,14 @@ premisesRouter.post("/", addPremises);
 // View All Premises premises/
 premisesRouter.get("/", viewAllPremises);
 
-// View Member Premises premises/:id
-premisesRouter.get("/:id", viewMemberPremises);
+// View Member Premises premises/:member_id
+premisesRouter.get("/:CustomerId", viewMemberPremises);
 
 // Update Premise premises/
 premisesRouter.put("/", updatePremises);
 
 // View Premise premises/
-premisesRouter.get("/", viewPremises);
+premisesRouter.get("/:id", viewPremises);
 
 export default premisesRouter;
 

@@ -1,6 +1,5 @@
 import express from 'express';
 import {addUser, logIn, viewAllUsers, updateUser, closeUser} from '../controllers/usersController.js'
-import {authenticate} from '../middlewares/auth.js';
 
 const userRouter = express.Router();
 
@@ -8,16 +7,16 @@ const userRouter = express.Router();
 userRouter.post("/", addUser);
 
 // LogIn user/:id
-userRouter.post("/login", authenticate, logIn);
+userRouter.post("/login", logIn);
 
 // View All Users user/
-userRouter.get("/", authenticate, viewAllUsers);
+userRouter.get("/", viewAllUsers);
 
 // Edit/Update User user/
-userRouter.put("/", authenticate, updateUser);
+userRouter.put("/", updateUser);
 
 // Close User Account user/:id
-userRouter.delete("/:id", authenticate, closeUser);
+userRouter.delete("/:id", closeUser);
 
 export default userRouter;
 

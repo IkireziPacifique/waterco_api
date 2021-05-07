@@ -22,8 +22,8 @@ const Payment = sequelize.define('payments', {
     },
 },{
     sequelize, 
-    tablename: "payments",
-    timestamp: false,
+    tableName: "payments",
+    timestamps: false,
     indexes: [{
         name: "PRIMARY",
         unique: true,

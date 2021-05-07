@@ -18,8 +18,8 @@ const Route = sequelize.define('routes',{
     }
 },{
     sequelize, 
-    tablename: "routes",
-    timestamp: false,
+    tableName: "routes",
+    timestamps: false,
     indexes: [{
         name: "PRIMARY",
         unique: true,

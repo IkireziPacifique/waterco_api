@@ -18,8 +18,8 @@ const Member = sequelize.define('customer', {
     }
 }, {
     sequelize,
-    tablename: "customer",
-    timestamp: false,
+    tableName: "customer",
+    timestamps: false,
     indexes: [{
         name: "PRIMARY",
         unique: true,

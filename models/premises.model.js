@@ -19,8 +19,8 @@ const Premises = sequelize.define('premises', {
     },
 },{
     sequelize,
-    tablename: "premises",
-    timestamp: false,
+    tableName: "premises",
+    timetamps: false,
     indexes: [{
         name: "PRIMARY",
         unique: true,

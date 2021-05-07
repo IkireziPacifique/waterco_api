@@ -1,6 +1,6 @@
 import Sequelize from "sequelize";
 import { sequelize } from "../db/dbConnect.js";
-
+ 
 const Bill = sequelize.define('bill', {
     BillId:{
         autoincrement: true,
