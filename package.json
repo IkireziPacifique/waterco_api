@@ -1,0 +1,27 @@
+{
+  "name": "water_api",
+  "version": "1.0.0",
+  "description": "An API for a water company application",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Waterco",
+    "API"
+  ],
+  "author": "Santigie Sankoh, Pacifique Linda IKIREZI",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.7",
+    "path": "^0.12.7",
+    "sequelize": "^6.6.2"
+  }
+}
