@@ -3,10 +3,10 @@ import { sequelize } from "../db/dbConnect.js";
 
 const Member = sequelize.define('customer', {
     CustomerId: {
+        primaryKey: true,
         autoincrement: true,
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        primaryKey: true
+        type: Sequelize.INTEGER(16),
+        allowNull: false
     },
     Cname: {
         type: Sequelize.STRING(50),
@@ -29,4 +29,4 @@ const Member = sequelize.define('customer', {
     }]
 })
 
-export default Member;
+export default Member; 

@@ -14,8 +14,8 @@ const Bill = sequelize.define('bill', {
     }
 },{
     sequelize, 
-    tablename: "bills",
-    timestamp: false,
+    tableName: "bills",
+    timestamps: false,
     indexes: [{
         name: "PRIMARY",
         unique: true,

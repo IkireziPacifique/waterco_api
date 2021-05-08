@@ -13,7 +13,7 @@ userRouter.post("/login", logIn);
 userRouter.get("/", viewAllUsers);
 
 // Edit/Update User user/
-userRouter.put("/", updateUser);
+userRouter.put("/:id", updateUser);
 
 // Close User Account user/:id
 userRouter.delete("/:id", closeUser);

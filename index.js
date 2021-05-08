@@ -1,17 +1,20 @@
 import express from "express";
 import bodyParser  from "body-parser";
 import dotenv from "dotenv";
+import cors from "cors";
 import router from "./routes/index.js";
 
 const app = express();
 
 dotenv.config();
 
-const port = process.env.PORT || 3003;
+const port = process.env.PORT || 3001;
 
 app.get('/' , (req, res) =>{
     res.send('Hello World')
 })
+
+app.use(cors())
 
 app.use(express.json());
 app.use(bodyParser.json());

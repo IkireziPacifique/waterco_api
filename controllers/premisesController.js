@@ -2,7 +2,7 @@ import Premise from "../models/premises.model.js";
 
 
 // Create A Premise 
-export async function addPremises(res, req) {
+export async function addPremises(req, res) {
     try {
         let premise = await Premise.create(req.body);
         if (premise) {
@@ -27,7 +27,7 @@ export async function addPremises(res, req) {
 }
 
 // View All Premises 
-export async function viewAllPremises(res, req) {
+export async function viewAllPremises(req, res) {
     try {
         let allpremises = await Premise.findAll();
         if (allpremises) {
@@ -52,7 +52,7 @@ export async function viewAllPremises(res, req) {
 }
 
 // View Member Premises 
-export async function viewMemberPremises(res, req) {
+export async function viewMemberPremises(req, res) {
     try {
         let allmembers = await Premise.findAll({ where: { member_id: req.params.id } });
         if (allmembers) {
@@ -102,7 +102,7 @@ export async function updatePremises(req, res) {
 }
 
 // View Premise 
-export async function viewPremises(res, req) {
+export async function viewPremises(req, res) {
     try {
         let allpremises = await Premise.findAll({ where: { member_id: req.params.id } });
         if (allpremises) {

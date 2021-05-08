@@ -1,7 +1,7 @@
 import Member from "../models/members.model.js";
 
 // Add a Member
-export async function addMember(res, req) {
+export async function addMember(req, res) {
     try {
         let member = await Member.create(req.body);
         if (member) {
@@ -103,7 +103,7 @@ export async function updateMember(req, res) {
 // Delete a member
 export async function deleteMember(req, res) {
     try {
-        let member = await Member.delete({where: {book_id: req.params.id}});
+        let member = await Member.delete({ where: { book_id: req.params.id } });
         if (member) {
             res.status(200).json({
                 success: true,
