@@ -1,7 +1,7 @@
 import Payment from "../models/payments.model.js";
 
 // Capture Payment
-export async function capturePayment(res, req) {
+export async function capturePayment(req, res) {
     try {
         let payment = await Payment.create(req.body);
         if (payment) {
@@ -26,7 +26,7 @@ export async function capturePayment(res, req) {
 }
 
 // View All Payments
-export async function viewPayment(res, req) {
+export async function viewPayment(req, res) {
     try {
         let allpayments = await Payment.findAll();
         if (allpayments) {
@@ -51,7 +51,7 @@ export async function viewPayment(res, req) {
 }
 
 // View Payments By Premise
-export function viewPremisesPayment(res, req){
+export function viewPremisesPayment(req, res){
     console.log(req.body);
     res.send(req.body);
 }

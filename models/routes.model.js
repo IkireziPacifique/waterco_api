@@ -5,7 +5,7 @@ const Route = sequelize.define('routes',{
     RouteId:{
         autoincrement: true,
         type: Sequelize.INTEGER,
-        allowNull: false,
+        allowNull: true,
         primaryKey: true
     },
     No_Plants:{

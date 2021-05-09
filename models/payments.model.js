@@ -5,7 +5,7 @@ const Payment = sequelize.define('payments', {
     PaymentId:{
         autoincrement: true,
         type: Sequelize.INTEGER,
-        allowNull: false,
+        allowNull: true,
         primaryKey: true
     },
     PaymentModel:{

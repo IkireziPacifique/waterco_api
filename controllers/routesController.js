@@ -1,7 +1,7 @@
 import Route from "../models/routes.model.js";
 
 // Create Route
-export async function addRoute(res, req) {
+export async function addRoute(req, res) {
     try {
         let route = await Route.create(req.body);
         if (route) {

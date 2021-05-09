@@ -13,7 +13,7 @@ premisesRouter.get("/", viewAllPremises);
 premisesRouter.get("/:CustomerId", viewMemberPremises);
 
 // Update Premise premises/
-premisesRouter.put("/", updatePremises);
+premisesRouter.put("/:id", updatePremises);
 
 // View Premise premises/
 premisesRouter.get("/:id", viewPremises);

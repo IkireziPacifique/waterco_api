@@ -2,8 +2,9 @@ import Member from "../models/members.model.js";
 
 // Add a Member
 export async function addMember(req, res) {
+    console.log(req.body);
     try {
-        let member = await Member.create(req.body);
+        let member = await Member.create(req.body);  
         if (member) {
             res.status(200).json({
                 success: true,
@@ -78,12 +79,14 @@ export async function viewAllMembers(req, res) {
 // Update member record
 export async function updateMember(req, res) {
     try {
-        let record = await Record.update(req.body);
+        let record = await Member.update(req.body, {
+            where: { CustomerId: req.params.id },
+          });
         if (record) {
             res.status(200).json({
                 success: true,
                 message: 'Member records updated successfully',
-                data: member
+                data: member,
             })
         } else {
             res.json({
@@ -103,9 +106,9 @@ export async function updateMember(req, res) {
 // Delete a member
 export async function deleteMember(req, res) {
     try {
-        let member = await Member.delete({ where: { book_id: req.params.id } });
+        let member = await Member.delete({ where: { CustomerId: req.params.id } });
         if (member) {
-            res.status(200).json({
+            res.json({
                 success: true,
                 message: 'Member was successfully deleted',
                 data: member

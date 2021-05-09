@@ -5,8 +5,8 @@ const Member = sequelize.define('customer', {
     CustomerId: {
         primaryKey: true,
         autoincrement: true,
-        type: Sequelize.INTEGER(16),
-        allowNull: false
+        type: Sequelize.INTEGER,
+        allowNull: true
     },
     Cname: {
         type: Sequelize.STRING(50),

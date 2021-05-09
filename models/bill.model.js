@@ -1,11 +1,11 @@
 import Sequelize from "sequelize";
 import { sequelize } from "../db/dbConnect.js";
  
-const Bill = sequelize.define('bill', {
+const Bill = sequelize.define('bills', {
     BillId:{
         autoincrement: true,
         type: Sequelize.INTEGER,
-        allowNull: false,
+        allowNull: true,
         primaryKey: true
     },
     No_Zones:{

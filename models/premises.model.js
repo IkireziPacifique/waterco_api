@@ -6,7 +6,7 @@ const Premises = sequelize.define('premises', {
     PremisesId:{
         autoincrement: true,
         type: Sequelize.INTEGER,
-        allowNull: false,
+        allowNull: true,
         primaryKey: true
     },
     Meter_no:{

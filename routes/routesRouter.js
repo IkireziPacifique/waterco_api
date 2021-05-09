@@ -11,7 +11,7 @@ routeRouter.post("/", addRoute);
 routeRouter.get("/", viewRoutes);
 
 // Edit/Update Route route/
-routeRouter.put("/", updateRoute);
+routeRouter.put("/:id", updateRoute);
 
 // View Premises on Route route/:id
 routeRouter.get("/:id", viewPremisesRoute);

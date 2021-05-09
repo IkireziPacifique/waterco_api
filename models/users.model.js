@@ -4,8 +4,8 @@ import { sequelize } from "../db/dbConnect.js";
 const User = sequelize.define('users', {
     user_id: {
         autoincrement: true,
-        type: Sequelize.INTEGER,
-        allowNull: false,
+        type: Sequelize.INTEGER(11),
+        allowNull: true,
         primaryKey: true
     },
     email_address: {
@@ -22,8 +22,8 @@ const User = sequelize.define('users', {
     }
 }, {
     sequelize,
-    tableName: "customer",
-    timestamps: "false",
+    tableName: "users",
+    timestamps: false,
     indexes: [{
         name: "PRIMARY",
         unique: true,

@@ -1,7 +1,7 @@
 import Bill from "../models/bill.model.js";
 
 // Capture Reading
-export async function captureBill(res, req) {
+export async function captureBill(req, res) {
     try {
         let bill = await Bill.create(req.body);
         if (bill) {
@@ -26,9 +26,9 @@ export async function captureBill(res, req) {
 }
 
 // View Bill
-export async function viewBill(res, req) {
+export async function viewBill(req, res) {
     try {
-        let allbills = await Bill.findAll({ where: { member_id: req.params.id } });
+        let allbills = await Bill.findAll({ where: { BillId: req.params.id } });
         if (allbills) {
             res.json({
                 success: true,

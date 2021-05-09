@@ -79,7 +79,9 @@ export async function viewMemberPremises(req, res) {
 // Update Premise 
 export async function updatePremises(req, res) {
     try {
-        let premise = await Premise.update(req.body);
+        let premise = await Premise.update(req.body, {
+            where: { PremiseId: req.params.id },
+          });
         if (premise) {
             res.status(200).json({
                 success: true,
