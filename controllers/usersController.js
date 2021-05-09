@@ -107,7 +107,9 @@ export async function viewAllUsers(req, res) {
 // Edit/Update User 
 export async function updateUser(req, res) {
     try {
-        let record = await User.update(req.body);
+        let record = await User.update(req.body, {
+            where: { CustomerId: req.params.id },
+          });
         if (record) {
             res.status(200).json({
                 success: true,

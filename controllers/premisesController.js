@@ -91,7 +91,7 @@ export async function updatePremises(req, res) {
         } else {
             res.json({
                 success: true,
-                message: 'Member not found.',
+                message: 'Premise not found.',
             })
         }
     } catch (err) {

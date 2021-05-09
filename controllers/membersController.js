@@ -86,7 +86,7 @@ export async function updateMember(req, res) {
             res.status(200).json({
                 success: true,
                 message: 'Member records updated successfully',
-                data: member,
+                data: record,
             })
         } else {
             res.json({
